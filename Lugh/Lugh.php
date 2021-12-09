@@ -4,7 +4,14 @@ require(BASE . "Lugh/autoload.php");
 
 class Lugh
 {
-    public static $urls = array();
+    // public static $urls = array();
+
+    public static $URLS_GET = array();
+    public static $URLS_POST = array();
+    public static $URLS_PUT = array();
+    public static $URLS_DELETE = array();
+    public static $URLS_PATCH = array();
+
     public static $APP, $CLASS, $ACT;
 
     public function __construct()
@@ -16,14 +23,38 @@ class Lugh
     {
         $match = false;
         $control = "";
-        foreach (self::$urls as $k => $v) {
 
-            $u = parse_url(URI);
+        $urls = array();
+
+        switch ($_SERVER['REQUEST_METHOD']) {
+            case "GET":
+                $urls = self::$URLS_GET;
+                break;
+            case "POST":
+                $urls = self::$URLS_POST;
+                break;
+            case "PUT":
+                $urls = self::$URLS_PUT;
+                break;
+            case "DELETE":
+                $urls = self::$URLS_DELETE;
+                break;
+            case "PATCH":
+                $urls = self::$URLS_PATCH;
+                break;
+        }
+
+        foreach ($urls as $k => $v) {
+
+            $uri = parse_url(URI);
             $matches = array();
-            if (preg_match("#^\/?{$k}\/?$#i", $u["path"], $matches)) {
+            if (preg_match("#^\/?{$k}\/?$#i", $uri["path"], $matches)) {
                 $match = true;
                 $control = $v;
-                foreach ($matches as $kk => $vv) if (!is_numeric($kk) and $kk != 'querystring') $_GET[$kk] = $vv;
+
+                foreach ($matches as $kk => $vv)
+                    if (!is_numeric($kk) and $kk != 'querystring')
+                        $_GET[$kk] = $vv;
             }
         }
 
@@ -57,11 +88,36 @@ class Lugh
         }
     }
 
-    public static function setUrl($urls)
+    // public static function setUrl($urls)
+    // {
+    //     foreach ($urls as $k => $v) {
+    //         self::$urls[$k] = $v;
+    //     }
+    // }
+
+    public static function addGet($url, $acao)
     {
-        foreach ($urls as $k => $v) {
-            self::$urls[$k] = $v;
-        }
+        self::$URLS_GET[$url] = $acao;
+    }
+
+    public static function addPost($url, $acao)
+    {
+        self::$URLS_POST[$url] = $acao;
+    }
+
+    public static function addPut($url, $acao)
+    {
+        self::$URLS_PUT[$url] = $acao;
+    }
+
+    public static function addDelete($url, $acao)
+    {
+        self::$URLS_DELETE[$url] = $acao;
+    }
+
+    public static function addPatch($url, $acao)
+    {
+        self::$URLS_PATCH[$url] = $acao;
     }
 
     public static function loadClasses()
