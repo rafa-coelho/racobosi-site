@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+*,
+::before,
+::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+::-moz-selection {
+    background-color: #6610f2;
+    color: #fafafa;
+}
+
+::selection {
+    background-color: #6610f2;
+    color: #fafafa;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fafafa;
+    color: #fafafa;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #0e091b;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #6610f2;
+    border-radius: 6px;
+}
+
+.header-menu {
+    background: rgba(14, 9, 27, 0.6) !important;
+    backdrop-filter: blur(25px) !important;
+    -webkit-backdrop-filter: blur(25px) !important;
+    border-bottom: 1px solid rgba(114, 114, 126, 0.2) !important;
+}
+
+.header-menu,
+.header-menu a,
+.header-menu ul li a {
+    color: #fafafa!important;
+}
+
+main #sobreMim {
+    padding: 100px 20px 0px 20px;
+    background-color: #0e091b;
+    height: 100vh;
+}
+
+main #sobreMim .container-fluid div h2 {
+    margin-left: 30px;
+}
+
+@media screen and (max-width: 1024px) {
+    main #sobreMim {
+        padding: 75px 20px 50px 20px;
+    }
+}
+
+main #sobreMim h2 {
+    color: #fafafa;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+main #sobreMim h2 #meuNome {
+    font-size: 2.8rem;
+    margin: 10px 0 !important;
+}
+
+main #sobreMim span.cursor {
+    display: inline-block;
+    background-color: #ccc;
+    margin-left: 0.1rem;
+    width: 3px;
+    animation: blink 1s infinite;
+}
+
+main #sobreMim span.cursor.typing {
+    animation: none;
+}
+
+main #sobreMim p {
+    font-size: 1rem;
+}
+
+@keyframes blink {
+    0% {
+        background-color: #ccc;
+    }
+    49% {
+        background-color: #ccc;
+    }
+    50% {
+        background-color: transparent;
+    }
+    99% {
+        background-color: transparent;
+    }
+    100% {
+        background-color: #ccc;
+    }
+}
