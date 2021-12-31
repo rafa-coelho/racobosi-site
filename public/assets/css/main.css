@@ -108,3 +108,35 @@ main #sobreMim p {
         background-color: #ccc;
     }
 }
+
+main #conhecimentos {
+    border: none;
+    background-color: #110E1B;
+    height: 100vh;
+    padding-top: 100px;
+}
+
+main #conhecimentos .card {
+    margin-top: 20px;
+}
+
+main #conhecimentos .card,
+main #conhecimentos .card-body {
+    background-color: #0E091B;
+    cursor: pointer;
+    padding: 10px;
+}
+
+main #conhecimentos .card-body img {
+    width: 100%;
+}
+
+main #conhecimentos .card:hover {
+    border: 1px solid #6610f2;
+}
+
+
+/* main #conhecimentos .card-body
+{
+
+} */
