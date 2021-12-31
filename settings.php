@@ -40,6 +40,7 @@
     define('URI', preg_replace('~/~', '', $_SERVER['REQUEST_URI'], 1));
 
     define("MEDIA_DIR", HOST . "media/");
+    define("MAIL_ADDRESS", HOST . getenv("MAIL_ADDRESS"));
 
 
     mb_internal_encoding('UTF-8');

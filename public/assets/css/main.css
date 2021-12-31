@@ -196,3 +196,12 @@ main #clientes .card .card-body img {
 main #clientes .card .card-text {
     text-align: left;
 }
+
+footer {
+    background-color: #0e091b;
+}
+
+footer a {
+    text-decoration: none;
+    font-size: 1.5em;
+}

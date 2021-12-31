@@ -88,8 +88,6 @@ function SetSkillCardsText() {
 
     for (const i in cards) {
         const card = cards[i];
-        console.log(i <= 3 ? "top" : "bottom");
-
         var divCol3 = document.createElement("div");
         divCol3.setAttribute("class", "col-4 col-md-3");
 

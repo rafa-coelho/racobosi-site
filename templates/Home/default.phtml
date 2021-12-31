@@ -11,8 +11,7 @@
     <meta name="copyright" content="racobosi 2021" />
     <meta http-equiv="content-language" content="pt-br" />
     <meta name="theme-color" content="#6610F2" />
-
-    <!-- <meta
+    <!--<meta
       property="og:image"
       content=""
     /> -->
@@ -21,6 +20,7 @@
 
     <link href="<?= HOST ?>/public/assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="<?= HOST ?>/public/assets/css/main.css" rel="stylesheet" />
+    <link href="<?= HOST ?>/public/assets/fontawesome/css/all.css" rel="stylesheet" />
 
     <title>Racobosi</title>
 </head>
@@ -127,7 +127,36 @@
 
     </main>
 
+    <footer class="text-center text-lg-start text-muted">
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 ">
+            <div class="me-5 d-none d-lg-block">
+                <span>Feito por mim mesmo! Aqui, minhas redes:</span>
+            </div>
 
+            <div>
+                <a href="mailto:<?= MAIL_ADDRESS ?>" class="me-4 text-reset">
+                    <i class="far fa-envelope"></i>
+                </a>
+                <a href="https://www.instagram.com/rafael.coelho_" target="_blank" class="me-4 text-reset">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/racobosi/" target="_blank" class="me-4 text-reset">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/rafa-coelho" target="_blank" class="me-4 text-reset">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://twitter.com/racobosi" target="_blank" class="me-4 text-reset">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </section>
+
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            Feito com ❤️ por Rafael Coelho - <small>2021<?= date("Y") == "2021" ? "" : "-" . date("Y") ?></small> 
+
+        </div>
+    </footer>
 
 </body>
 
