@@ -48,10 +48,13 @@ body {
     color: #fafafa!important;
 }
 
+main section {
+    min-height: 100vh;
+}
+
 main #sobreMim {
     padding: 100px 20px 0px 20px;
     background-color: #0e091b;
-    height: 100vh;
 }
 
 main #sobreMim .container-fluid div h2 {
@@ -112,7 +115,6 @@ main #sobreMim p {
 main #conhecimentos {
     border: none;
     background-color: #110E1B;
-    height: 100vh;
     padding-top: 100px;
 }
 
@@ -135,8 +137,62 @@ main #conhecimentos .card:hover {
     border: 1px solid #6610f2;
 }
 
+main #projetos {
+    background-color: #0e091b;
+    padding-top: 100px;
+    padding: 20px;
+}
 
-/* main #conhecimentos .card-body
-{
+section .card {
+    background-color: #110E1B;
+    text-align: left;
+}
 
-} */
+section .card:hover {
+    border: 1px solid #6610f2;
+}
+
+section .card .card-title {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+section .card .card-title a {
+    text-decoration: none;
+    color: white;
+}
+
+section .card .card-subtitle {
+    font-size: 15px;
+}
+
+section .card .card-text {
+    font-size: 15px;
+    color: #DDD;
+}
+
+section div.card-footer>a {
+    font-size: 12px;
+    color: #ccc;
+    text-decoration: none;
+}
+
+main #clientes {
+    padding-top: 100px;
+    padding: 20px;
+    background-color: #110E1B;
+}
+
+main #clientes .card {
+    background-color: #0e091b;
+}
+
+main #clientes .card .card-body img {
+    width: 100px;
+    border-radius: 50%!important;
+    margin-bottom: 10px;
+}
+
+main #clientes .card .card-text {
+    text-align: left;
+}

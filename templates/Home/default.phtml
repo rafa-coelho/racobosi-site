@@ -41,13 +41,13 @@
                         <a class="nav-link active" aria-current="page" href="#">Sobre mim</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Conhecimentos</a>
+                        <a class="nav-link" href="#conhecimentos">Conhecimentos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Projetos</a>
+                        <a class="nav-link" href="#projetos">Projetinhos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Clientes</a>
+                        <a class="nav-link" href="#clientes">Clientes</a>
                     </li>
 
                 </ul>
@@ -60,7 +60,7 @@
         <section id="sobreMim">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-6 col-sm-12 d-flex align-items-center">
+                    <div class="col-md-6 col-sm-12 mb-5 d-flex align-items-center">
                         <h2>
                             Oi, eu sou <br />
                             <label id="meuNome">Rafael Coelho</label><br />
@@ -71,7 +71,7 @@
                         </h2>
                     </div>
                     <div class="col-md-6 col-sm-12">
-                        <img width="80%" src="<?= HOST ?>/public/assets/images/img_programming.svg" />
+                        <img width="100%" src="<?= HOST ?>/public/assets/images/img_programming.svg" />
                     </div>
                 </div>
 
@@ -80,11 +80,11 @@
 
         <section id="conhecimentos">
             <div class="container-fluid">
-                <div class="row p-5">
+                <div class="row p-md-5">
 
                     <div class="col-md-6 p-4">
                         <h3>Conhecimentos</h3>
-                        <p id="textoSkill">Passe o mouse ao lado para ver mais informações</p>
+                        <p id="textoSkill" class="d-none d-md-block">Passe o mouse ao lado para ver mais informações</p>
                     </div>
 
                     <div class="col-md-6 p-4">
@@ -92,6 +92,37 @@
                     </div>
 
                 </div>
+        </section>
+
+        <section id="projetos">
+            <div class="container-fluid">
+                <div class="row p-md-5 text-center">
+                    <div class="col-md-12 pt-4">
+                        <h4>Projetinhos</h4>
+                    </div>
+
+                    <div class="col-md-12 pt-4">
+                        <div class="row" id="projetosRealizados"></div>
+                        <div class="row d-flex justify-content-center pt-4">
+                            <div class="col-md-4">
+                                <a href="https://github.com/rafa-coelho" target="_blank" style="background-color: #110E1B; border-color: #110E1B" class="btn btn-primary">Ver repositórios</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="clientes">
+            <div class="container-fluid">
+                <div class="row p-md-5 d-flex justify-content-center">
+                    <div class="col-md-12 pt-4 text-center">
+                        <h4>Clientes</h4>
+                    </div>
+
+                    <div class="row pt-5 d-flex justify-content-center" id="clientesAtendidos"></div>
+                </div>
+            </div>
         </section>
 
     </main>
