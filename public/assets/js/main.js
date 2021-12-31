@@ -142,7 +142,7 @@ function SetProjectsCards() {
         {
             title: "Site de Casamento",
             description: "Sistema que eu usei para o meu site de casamento com lista de compras, pagamento online e confirmação de presença!",
-            url: "https://github.com/rafa-coelho/marriage-list-api",
+            url: "https://github.com/rafa-coelho/site-casamento",
             stack: "React JS"
         },
         {
