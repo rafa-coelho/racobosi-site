@@ -154,7 +154,7 @@ function SetProjectsCards() {
         {
             title: "Client da API do Pagseguro",
             description: "Pacote NPM para consumir a API de pagamento transparente do PagSeguro",
-            url: "https://www.npmjs.com/package/node-pagseguro",
+            url: "https://www.npmjs.com/package/pagseguro-api",
             stack: "NodeJS"
         },
     ];

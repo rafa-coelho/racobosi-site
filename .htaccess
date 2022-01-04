@@ -1,0 +1,38 @@
+<IfModule mod_deflate.c>
+	AddOutputFilterByType DEFLATE text/html
+	AddOutputFilterByType DEFLATE text/plain
+	AddOutputFilterByType DEFLATE text/xml
+	AddOutputFilterByType DEFLATE text/javascript
+	AddOutputFilterByType DEFLATE text/css
+	AddOutputFilterByType DEFLATE text/json
+	AddOutputFilterByType DEFLATE text/php
+	
+	AddOutputFilterByType DEFLATE application/rss+xml
+	AddOutputFilterByType DEFLATE application/rdf+xml
+	AddOutputFilterByType DEFLATE application/json+xml
+	AddOutputFilterByType DEFLATE application/javascript
+	AddOutputFilterByType DEFLATE application/php
+	
+	AddOutputFilterByType DEFLATE image/jpg
+	AddOutputFilterByType DEFLATE image/jpeg
+	AddOutputFilterByType DEFLATE image/gif
+	AddOutputFilterByType DEFLATE image/png
+	AddOutputFilterByType DEFLATE image/bmp
+	
+	BrowserMatch ^Mozilla/4 gzip-only-text/html
+	BrowserMatch ^Mozilla/4\.0[678] no-gzip
+	BrowserMatch \bMSIE !no-gzip !gzip-only-text/html 
+	
+</IfModule>
+
+FileETag None
+Options +FollowSymLinks
+
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteRule (big|small|square) media/images/avatar/$1/default.jpg
+
+	RewriteRule !\.(JPG|JPEG|BMP|php|js|ico|bmp|gif|jpg|jpeg|png|css|flv|swf|pdf|rdf|xml|rss|html|htm|csv|eot|woff|ttf|svg|mp3)$ index.php [L]
+</IfModule>

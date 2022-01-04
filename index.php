@@ -5,6 +5,6 @@
     define("BASE", "");
 
     require("settings.php");
-    require(BASE . "lugh/Lugh.php");
+    require(BASE . "Lugh/Lugh.php");
     require("urls.php");
     new Lugh();
