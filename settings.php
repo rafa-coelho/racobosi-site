@@ -20,15 +20,20 @@ define("SITE_NAME", "Rafael Coelho");
 
 define("PROD", in_array($_SERVER['HTTP_HOST'], array("racobosi.com.br", "www.racobosi.com.br")));
 
-define('REQUEST_PROTOCOL', (isset($_SERVER["HTTP_X_FORWARDED_PROTO"])) ? $_SERVER["HTTP_X_FORWARDED_PROTO"] . "://" : "http://");
+define('REQUEST_PROTOCOL', (isset($_SERVER["HTTP_X_HTTPS"])) ? "https://" : "http://");
 define('HOST', REQUEST_PROTOCOL . $_SERVER['HTTP_HOST'] . "/");
 define('URI', preg_replace('~/~', '', $_SERVER['REQUEST_URI'], 1));
 
+echo "<pre>";
+print_r($_SERVER);
+echo "</pre>";
+die($_SERVER);
 
-if (PROD && HOST != "https://racobosi.com.br/") {
+if (PROD && REQUEST_PROTOCOL == "http://") {
     header("HTTP/1.1 301 Moved Permanently");
     header("Location: https://racobosi.com.br/" . URI);
 }
+
 $PREFIX = "st";
 define("PREFIX", $PREFIX);
 
