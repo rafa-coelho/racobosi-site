@@ -19,21 +19,15 @@ define("SITE_NAME", "Rafael Coelho");
 
 $HOST = isset($_ENV["HOST"]) ? $_ENV["HOST"] : "racobosi.com.br";
 
-define("PROD", $_SERVER['HTTP_HOST'] == $HOST);
-
-define('REQUEST_PROTOCOL', (isset($_SERVER["HTTP_X_HTTPS"])) ? "https://" : "http://");
-define('HOST', REQUEST_PROTOCOL . $_SERVER['HTTP_HOST'] . "/");
+define("PROD", isset($_ENV["ENV"]) && $_ENV["ENV"] == 'prod');
+define('REQUEST_PROTOCOL', (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://");
+define('HOST',  REQUEST_PROTOCOL . $_SERVER['HTTP_HOST'] . '/');
 define('URI', preg_replace('~/~', '', $_SERVER['REQUEST_URI'], 1));
 
-echo "<pre>";
-echo $_SERVER["HTTP_X_HTTPS"];
-echo "</pre>";
-
-
-// if (PROD && REQUEST_PROTOCOL == "http://") {
-//     header("HTTP/1.1 301 Moved Permanently");
-//     header("Location: https://$HOST/" . URI);
-// }
+if (PROD && REQUEST_PROTOCOL == "http://") {
+    header("HTTP/1.1 301 Moved Permanently");
+    header("Location: https://$HOST/" . URI);
+}
 
 $PREFIX = "st";
 define("PREFIX", $PREFIX);
