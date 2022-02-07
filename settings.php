@@ -24,10 +24,10 @@ define('REQUEST_PROTOCOL', (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== '
 define('HOST',  REQUEST_PROTOCOL . $_SERVER['HTTP_HOST'] . '/');
 define('URI', preg_replace('~/~', '', $_SERVER['REQUEST_URI'], 1));
 
-if (PROD && REQUEST_PROTOCOL == "http://") {
-    header("HTTP/1.1 301 Moved Permanently");
-    header("Location: https://$HOST/" . URI);
-}
+// if (PROD && REQUEST_PROTOCOL == "http://") {
+//     header("HTTP/1.1 301 Moved Permanently");
+//     header("Location: https://$HOST/" . URI);
+// }
 
 echo "<pre>";
 echo "PROD -> " . PROD;
