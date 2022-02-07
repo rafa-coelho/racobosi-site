@@ -29,6 +29,20 @@ if (PROD && REQUEST_PROTOCOL == "http://") {
     header("Location: https://$HOST/" . URI);
 }
 
+echo "<pre>";
+echo "PROD -> " . PROD;
+echo "<br />";
+echo "REQUEST_PROTOCOL -> " . REQUEST_PROTOCOL;
+echo "<br />";
+echo "HOST -> " . HOST;
+echo "<br />";
+echo "\$HOST -> " . $HOST;
+echo "<br />";
+echo "URI -> " . URI;
+echo "</pre>";
+
+
+
 $PREFIX = "st";
 define("PREFIX", $PREFIX);
 
