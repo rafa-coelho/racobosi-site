@@ -20,15 +20,22 @@ define("SITE_NAME", "Rafael Coelho");
 $HOST = isset($_ENV["HOST"]) ? $_ENV["HOST"] : "racobosi.com.br";
 
 define("PROD", in_array($_SERVER['HTTP_HOST'], array(HOST, "www.$HOST")));
-echo "<pre>";
-echo $_SERVER['HTTP_HOST'];
-echo "<br />";
-echo $HOST;
-echo "</pre>";
 
 define('REQUEST_PROTOCOL', (isset($_SERVER["HTTP_X_HTTPS"])) ? "https://" : "http://");
 define('HOST', REQUEST_PROTOCOL . $_SERVER['HTTP_HOST'] . "/");
 define('URI', preg_replace('~/~', '', $_SERVER['REQUEST_URI'], 1));
+
+echo "<pre>";
+echo PROD ? "true" : "false";
+echo "<br />";
+echo $_SERVER['HTTP_HOST'];
+echo "<br />";
+echo $HOST;
+echo "<br />";
+echo $HOST;
+echo "<br />";
+echo REQUEST_PROTOCOL;
+echo "</pre>";
 
 
 if (PROD && REQUEST_PROTOCOL == "http://") {
