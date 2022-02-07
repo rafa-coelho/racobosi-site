@@ -17,8 +17,9 @@ if (!empty($http_client_ip)) {
 
 define("SITE_NAME", "Rafael Coelho");
 
+$host = isset($_ENV["HOST"]) ? $_ENV["HOST"] : "racobosi.com.br";
 
-define("PROD", in_array($_SERVER['HTTP_HOST'], array("racobosi.com.br", "www.racobosi.com.br")));
+define("PROD", in_array($_SERVER['HTTP_HOST'], array(HOST, "www.$HOST")));
 
 define('REQUEST_PROTOCOL', (isset($_SERVER["HTTP_X_HTTPS"])) ? "https://" : "http://");
 define('HOST', REQUEST_PROTOCOL . $_SERVER['HTTP_HOST'] . "/");
@@ -27,7 +28,7 @@ define('URI', preg_replace('~/~', '', $_SERVER['REQUEST_URI'], 1));
 
 if (PROD && REQUEST_PROTOCOL == "http://") {
     header("HTTP/1.1 301 Moved Permanently");
-    header("Location: https://racobosi.com.br/" . URI);
+    header("Location: https://$HOST/" . URI);
 }
 
 $PREFIX = "st";
@@ -54,8 +55,10 @@ define("REQUEST_TOKEN", md5($ip) . sha1(SESSION_SALT));
 // define('HOST', REQUEST_PROTOCOL . '://' . $_SERVER['HTTP_HOST'] . "/");
 // define('URI', preg_replace('~/~', '', $_SERVER['REQUEST_URI'], 1));
 
+$MAIL = isset($_ENV["MAIL"]) ? $_ENV["MAIL"] : "rafael.coelho@racobosi.com.br";
+
 define("MEDIA_DIR", HOST . "media/");
-define("MAIL_ADDRESS", "rafael.coelho@racobosi.com.br");
+define("MAIL_ADDRESS",  $MAIL);
 
 
 mb_internal_encoding('UTF-8');
