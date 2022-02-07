@@ -20,7 +20,7 @@ define("SITE_NAME", "Rafael Coelho");
 $HOST = isset($_ENV["HOST"]) ? $_ENV["HOST"] : "racobosi.com.br";
 
 define("PROD", isset($_ENV["ENV"]) && $_ENV["ENV"] == 'prod');
-define('REQUEST_PROTOCOL', (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://");
+define('REQUEST_PROTOCOL', $_SERVER["HTTP_X_FORWARDED_PROTO"] . "://");
 define('HOST',  REQUEST_PROTOCOL . $_SERVER['HTTP_HOST'] . '/');
 define('URI', preg_replace('~/~', '', $_SERVER['REQUEST_URI'], 1));
 
@@ -28,6 +28,8 @@ define('URI', preg_replace('~/~', '', $_SERVER['REQUEST_URI'], 1));
 //     header("HTTP/1.1 301 Moved Permanently");
 //     header("Location: https://$HOST/" . URI);
 // }
+
+
 
 echo "<pre>";
 print_r($_SERVER);
