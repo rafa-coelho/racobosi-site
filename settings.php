@@ -25,6 +25,10 @@ define('REQUEST_PROTOCOL', (isset($_SERVER["HTTP_X_HTTPS"])) ? "https://" : "htt
 define('HOST', REQUEST_PROTOCOL . $_SERVER['HTTP_HOST'] . "/");
 define('URI', preg_replace('~/~', '', $_SERVER['REQUEST_URI'], 1));
 
+echo "<pre>";
+echo $_SERVER["HTTP_X_HTTPS"];
+echo "</pre>";
+
 
 // if (PROD && REQUEST_PROTOCOL == "http://") {
 //     header("HTTP/1.1 301 Moved Permanently");
