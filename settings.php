@@ -19,7 +19,7 @@ define("SITE_NAME", "Rafael Coelho");
 
 $HOST = isset($_ENV["HOST"]) ? $_ENV["HOST"] : "racobosi.com.br";
 
-define("PROD", in_array($_SERVER['HTTP_HOST'], array(HOST, "www.$HOST")));
+define("PROD", in_array($_SERVER['HTTP_HOST'], array($HOST, "www.$HOST")));
 
 define('REQUEST_PROTOCOL', (isset($_SERVER["HTTP_X_HTTPS"])) ? "https://" : "http://");
 define('HOST', REQUEST_PROTOCOL . $_SERVER['HTTP_HOST'] . "/");
