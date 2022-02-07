@@ -30,6 +30,7 @@ define('URI', preg_replace('~/~', '', $_SERVER['REQUEST_URI'], 1));
 // }
 
 echo "<pre>";
+print_r($_SERVER);
 echo "PROD -> " . PROD;
 echo "<br />";
 echo "REQUEST_PROTOCOL -> " . REQUEST_PROTOCOL;
