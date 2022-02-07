@@ -34,13 +34,6 @@ function erase() {
     }
 }
 
-function SetToolTips() {
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-    tooltipTriggerList.map(function(tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl);
-    });
-}
-
 function SetSkillCardsText() {
     const cards = [{
             title: "JavaScript",
@@ -235,7 +228,6 @@ document.addEventListener("DOMContentLoaded", function() { // On DOM Load initia
     if (textArray.length) setTimeout(type, newTextDelay + 250);
 
     SetSkillCardsText();
-    SetToolTips();
     SetProjectsCards();
     SetClientsCards();
 });
