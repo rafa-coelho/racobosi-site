@@ -93,7 +93,6 @@ function SetSkillCardsText() {
 
         var divCard = document.createElement("div");
         divCard.setAttribute("class", "card");
-        divCard.setAttribute("data-bs-toggle", "tooltip");
         divCard.setAttribute("data-bs-placement", i <= 3 ? "top" : "bottom");
         divCard.setAttribute("title", card.title);
 
