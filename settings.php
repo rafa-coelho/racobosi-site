@@ -17,7 +17,7 @@ if (!empty($http_client_ip)) {
 
 define("SITE_NAME", "Rafael Coelho");
 
-$host = isset($_ENV["HOST"]) ? $_ENV["HOST"] : "racobosi.com.br";
+$HOST = isset($_ENV["HOST"]) ? $_ENV["HOST"] : "racobosi.com.br";
 
 define("PROD", in_array($_SERVER['HTTP_HOST'], array(HOST, "www.$HOST")));
 
