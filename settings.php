@@ -24,27 +24,10 @@ define('REQUEST_PROTOCOL', $_SERVER["HTTP_X_FORWARDED_PROTO"] . "://");
 define('HOST',  REQUEST_PROTOCOL . $_SERVER['HTTP_HOST'] . '/');
 define('URI', preg_replace('~/~', '', $_SERVER['REQUEST_URI'], 1));
 
-// if (PROD && REQUEST_PROTOCOL == "http://") {
-//     header("HTTP/1.1 301 Moved Permanently");
-//     header("Location: https://$HOST/" . URI);
-// }
-
-
-
-echo "<pre>";
-print_r($_SERVER);
-echo "PROD -> " . PROD;
-echo "<br />";
-echo "REQUEST_PROTOCOL -> " . REQUEST_PROTOCOL;
-echo "<br />";
-echo "HOST -> " . HOST;
-echo "<br />";
-echo "\$HOST -> " . $HOST;
-echo "<br />";
-echo "URI -> " . URI;
-echo "</pre>";
-
-
+if (PROD && REQUEST_PROTOCOL == "http://") {
+    header("HTTP/1.1 301 Moved Permanently");
+    header("Location: https://$HOST/" . URI);
+}
 
 $PREFIX = "st";
 define("PREFIX", $PREFIX);
