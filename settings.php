@@ -47,6 +47,7 @@ define('HTTP_PROXY_PORT', '');
 define('SESSION_SALT', '');
 define('REQUEST_IP', $ip);
 define("REQUEST_TOKEN", md5($ip) . sha1(SESSION_SALT));
+define("GA_KEY", "G-GE5WZZ8KP0");
 // define('REQUEST_PROTOCOL', 'https');
 
 // define("API", "");
