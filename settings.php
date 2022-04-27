@@ -49,11 +49,14 @@ define('REQUEST_IP', $ip);
 define("REQUEST_TOKEN", md5($ip) . sha1(SESSION_SALT));
 define("GA_KEY", "G-GE5WZZ8KP0");
 
+define('DB_HOST', isset($_ENV["DB_HOST"]) ? $_ENV["DB_HOST"] : "127.0.0.1");
+define('DB_BASE', isset($_ENV["DB_BASE"]) ? $_ENV["DB_BASE"] : "pwdsmgr");
+define('DB_USER', isset($_ENV["DB_USER"]) ? $_ENV["DB_USER"] : "root");
+define('DB_PASS', isset($_ENV["DB_PASS"]) ? $_ENV["DB_PASS"] : "");
+
 $MAIL = isset($_ENV["MAIL"]) ? $_ENV["MAIL"] : "rafael.coelho@racoelho.com.br";
 
 define("MEDIA_DIR", HOST . "media/");
 define("MAIL_ADDRESS",  $MAIL);
-
-define("DATABASE_NAME", "pwdsmgr");
 
 mb_internal_encoding('UTF-8');

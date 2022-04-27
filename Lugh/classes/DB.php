@@ -2,7 +2,7 @@
 
 class DB
 {
-    private $host = "127.0.0.1", $db = DATABASE_NAME, $user = "root", $pass = "", $con;
+    private $host = DB_HOST, $db = DB_BASE, $user = DB_USER, $pass = DB_PASS, $con;
     public $tabela, $where = "", $limit = "", $order = "";
     
     
