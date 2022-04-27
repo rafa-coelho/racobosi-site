@@ -9,14 +9,11 @@ class Controller
     function __construct(){
         $this->get = Request::get();
         $this->post = Request::post();
+        $this->put = Request::put();
         $this->files = Request::files();
         $this->body = Request::body();
         $this->headers = Request::headers();
         $this->session = new Session();
-//        $this->cookies = new Cookies();
-        
-        
-        
     }
     
     protected function Preenchido($obrigatorios, $data){

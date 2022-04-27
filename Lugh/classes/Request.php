@@ -11,19 +11,38 @@ class Request
         return $_SERVER["REQUEST_METHOD"];
     }
     
-    public static function post($striptags=true, $method=STRIP){
+    public static function post(){
         $o = new stdClass;
         foreach($_POST as $k => $v){
             if(is_string($v)){
-                $o->$k = addslashes(($striptags) ? ($method == STRIP) ? strip_tags($v) : htmlspecialchars($v) : $v);
+                $o->$k = addslashes($v);
             } else if(is_array($v)) {
                 $a = new stdClass;
                 foreach($v as $kv => $vv)
-                    $a->{$kv} = addslashes(($striptags) ? ($method == STRIP) ? strip_tags($vv) : htmlspecialchars($vv) : $vv);
+                    $a->{$kv} = addslashes($vv);
 
                 $o->{$k} = $a;
             }
         }
+        return $o;
+    }
+
+    public static function put(){
+        parse_str(file_get_contents("php://input"), $put);
+        $o = new stdClass;
+
+        foreach($put as $k => $v){
+            if(is_string($v)){
+                $o->$k = addslashes($v);
+            } else if(is_array($v)) {
+                $a = new stdClass;
+                foreach($v as $kv => $vv)
+                    $a->{$kv} = addslashes($vv);
+
+                $o->{$k} = $a;
+            }
+        }
+        
         return $o;
     }
 

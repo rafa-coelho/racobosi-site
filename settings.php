@@ -17,10 +17,10 @@ if (!empty($http_client_ip)) {
 
 define("SITE_NAME", "Rafael Coelho");
 
-$HOST = isset($_ENV["HOST"]) ? $_ENV["HOST"] : "racobosi.com.br";
+$HOST = isset($_ENV["HOST"]) ? $_ENV["HOST"] : "racoelho.com.br";
 
 define("PROD", isset($_ENV["ENV"]) && $_ENV["ENV"] == 'prod');
-define('REQUEST_PROTOCOL', $_SERVER["HTTP_X_FORWARDED_PROTO"] . "://");
+define('REQUEST_PROTOCOL', isset($_SERVER["HTTP_X_FORWARDED_PROTO"]) ? $_SERVER["HTTP_X_FORWARDED_PROTO"] . "://" : "http://");
 define('HOST',  REQUEST_PROTOCOL . $_SERVER['HTTP_HOST'] . '/');
 define('URI', preg_replace('~/~', '', $_SERVER['REQUEST_URI'], 1));
 
@@ -48,16 +48,12 @@ define('SESSION_SALT', '');
 define('REQUEST_IP', $ip);
 define("REQUEST_TOKEN", md5($ip) . sha1(SESSION_SALT));
 define("GA_KEY", "G-GE5WZZ8KP0");
-// define('REQUEST_PROTOCOL', 'https');
 
-// define("API", "");
-// define('HOST', REQUEST_PROTOCOL . '://' . $_SERVER['HTTP_HOST'] . "/");
-// define('URI', preg_replace('~/~', '', $_SERVER['REQUEST_URI'], 1));
-
-$MAIL = isset($_ENV["MAIL"]) ? $_ENV["MAIL"] : "rafael.coelho@racobosi.com.br";
+$MAIL = isset($_ENV["MAIL"]) ? $_ENV["MAIL"] : "rafael.coelho@racoelho.com.br";
 
 define("MEDIA_DIR", HOST . "media/");
 define("MAIL_ADDRESS",  $MAIL);
 
+define("DATABASE_NAME", "pwdsmgr");
 
 mb_internal_encoding('UTF-8');
