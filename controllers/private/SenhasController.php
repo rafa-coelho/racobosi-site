@@ -4,8 +4,6 @@ class SenhasController extends Controller
 {    
     public function CriarSenha()
     {
-        print_r($this->headers);
-        return;
         if(!isset($this->headers->Token) || empty($this->headers->Token)){
             http_response_code(400);
             print("O header \"token\" é obrigatório");
