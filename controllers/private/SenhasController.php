@@ -6,13 +6,13 @@ class SenhasController extends Controller
     {
         print_r($this->headers);
         return;
-        if(!isset($this->headers->token) || empty($this->headers->token)){
+        if(!isset($this->headers->Token) || empty($this->headers->Token)){
             http_response_code(400);
             print("O header \"token\" é obrigatório");
             return;
         }
         
-        $tokenExists = Token::GetByToken($this->headers->token);
+        $tokenExists = Token::GetByToken($this->headers->Token);
         if($tokenExists == null){
             http_response_code(400);
             print("Token não encontrado!");
@@ -42,7 +42,7 @@ class SenhasController extends Controller
         
         $db->nome = $this->post->nome;
         $db->senha = $this->post->senha;
-        $db->token = $tokenExists->id;
+        $db->Token = $tokenExists->id;
         $db->insert();
         
         http_response_code(200);
@@ -50,13 +50,13 @@ class SenhasController extends Controller
     }
 
     public function BuscarSenha(){
-        if(!isset($this->headers->token) || empty($this->headers->token)){
+        if(!isset($this->headers->Token) || empty($this->headers->Token)){
             http_response_code(400);
             print("O header \"token\" é obrigatório");
             return;
         }
         
-        $tokenExists = Token::GetByToken($this->headers->token);
+        $tokenExists = Token::GetByToken($this->headers->Token);
         if($tokenExists == null){
             http_response_code(400);
             print("Token não encontrado!");
@@ -79,13 +79,13 @@ class SenhasController extends Controller
 
     public function AlterarSenha()
     {
-        if(!isset($this->headers->token) || empty($this->headers->token)){
+        if(!isset($this->headers->Token) || empty($this->headers->Token)){
             http_response_code(400);
             print("O header \"token\" é obrigatório");
             return;
         }
         
-        $tokenExists = Token::GetByToken($this->headers->token);
+        $tokenExists = Token::GetByToken($this->headers->Token);
         if($tokenExists == null){
             http_response_code(400);
             print("Token não encontrado!");
