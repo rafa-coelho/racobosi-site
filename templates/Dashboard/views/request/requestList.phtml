@@ -1,0 +1,239 @@
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-12">
+                <h1>Chamados</h1>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active">Chamados</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <div class="row" style="margin-bottom: 1em;">
+            <div class="col-md-11 ">
+                <label for="search">Buscar</label><input type="text" id="search" class="form-control" placeholder="Busque pelo código ou titulo do chamado">
+            </div>
+            <div class="col pull-right text-right">
+                <div class="row pull-right">
+                    <label for="filter_status">Filtro</label>
+                </div>
+                <div class="row text-right justify-items-right">
+                    <button class="btn btn-default btn-block pull-right" data-toggle="modal" data-target="#filterModal">
+                        <i class="fas fa-filter"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- <div class="col-md-2 pull-right">
+                
+                <label for="filter_status">Status</label>
+                <select name="filter_status" id="filter_status" class="form-control">
+                    <option>Todos</option>
+                    <option>Aberto</option>
+                    <option>Cancelado</option>
+                    <option>Atrasado</option>
+                    <option>Em andamento</option>
+                    <option>Concluído</option>
+                </select>
+            </div> -->
+            <!-- <div class="col-md-2 pull-right">
+                <label for="filter">Tipo</label>
+                <select name="filter" id="filter" class="form-control">
+                    <option>Todos</option>
+                    <option>Bug</option>
+                    <option>Alteração</option>
+                    <option>Funcionalidade</option>
+                </select>
+            </div>
+            <div class="col-md-2 pull-right">
+                <label for="order">Ordenar</label>
+                <select name="order" id="order" class="form-control">
+                    <option>Mais novos</option>
+                    <option>Mais Antigos</option>
+                    <option>Entrega Prox.</option>
+                    <option>Entrega Dist.</option>
+                </select>
+            </div> -->
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <!-- /.card-header -->
+                    <div class="card-body p-0">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <!-- <th style="width: 150px">#</th> -->
+                                    <th style="width: 10px;">#</th>
+                                    <th>Chamado</th>
+                                    <th>Cliente</th>
+                                    <th>Data da Solicitação</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="badge bg-danger">Bug</span></td>
+                                    <td>
+                                        <a href="<?= HOST ?>dashboard/request/PREF-1152">[PREF-1152] Erro na listagem de clientes</a>
+                                    </td>
+                                    <td>
+                                        <a href="<?= HOST ?>dashboard/customer/PREF">Prefácio</a>
+                                    </td>
+                                    <td>13/09/2022</td>
+                                    <td><span class="badge bg-danger">Atrasado</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge bg-primary">Alteração</span></td>
+                                    <td>
+                                        <a href="<?= HOST ?>dashboard/request/PREF-1152">[PREF-1152] Erro na listagem de clientes</a>
+                                    </td>
+                                    <td>
+                                        <a href="<?= HOST ?>dashboard/customer/PREF">Prefácio</a>
+                                    </td>
+                                    <td>13/09/2022</td>
+                                    <td><span class="badge bg-primary">Em andamento</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge bg-success">Funcionalidade</span></td>
+                                    <td>
+                                        <a href="<?= HOST ?>dashboard/request/PREF-1152">[PREF-1152] Erro na listagem de clientes</a>
+                                    </td>
+                                    <td>
+                                        <a href="<?= HOST ?>dashboard/customer/PREF">Prefácio</a>
+                                    </td>
+                                    <td>13/09/2022</td>
+                                    <td><span class="badge bg-success">Aberto</span></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="card-footer">
+                        <div class="card-tools">
+                            <ul class="pagination pagination-sm float-right">
+                                <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.col -->
+            </div>
+        </div>
+        <!-- /.row -->
+
+    </div>
+</section>
+
+
+
+<!-- Modal Filtro -->
+<div class="modal fade" id="filterModal" tabindex="-1" role="dialog" aria-labelledby="filterModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Filtros</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+
+                    <div class="row">
+                        <div class="col-12">
+                            <h6>Status</h6>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-4 mb-3 text-center">
+                            <button class="btn btn-primary btn-block btn-sm">
+                                Aberto
+                            </button>
+                        </div>
+                        <div class="col-4 mb-3 text-center">
+                            <button class="btn btn-default btn-block btn-sm">
+                                Cancelado
+                            </button>
+                        </div>
+                        <div class="col-4 mb-3 text-center">
+                            <button class="btn btn-default btn-block btn-sm">
+                                Atrasado
+                            </button>
+                        </div>
+                        <div class="col-4 mb-3 text-center">
+                            <button class="btn btn-default btn-block btn-sm">
+                                Em Andamento
+                            </button>
+                        </div>
+                        <div class="col-4 mb-3 text-center">
+                            <button class="btn btn-default btn-block btn-sm">
+                                Concluído
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <h6>Tipo</h6>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-4 mb-3 text-center">
+                            <button class="btn btn-primary btn-block btn-sm">
+                                Bug
+                            </button>
+                        </div>
+                        <div class="col-4 mb-3 text-center">
+                            <button class="btn btn-default btn-block btn-sm">
+                                Alteração
+                            </button>
+                        </div>
+                        <div class="col-4 mb-3 text-center">
+                            <button class="btn btn-default btn-block btn-sm">
+                                Funcionalidade
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <h6>Ordenar por</h6>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-4 mb-3 text-center">
+                            <button class="btn btn-primary btn-block btn-sm">
+                                Mais novos
+                            </button>
+                        </div>
+                        <div class="col-4 mb-3 text-center">
+                            <button class="btn btn-default btn-block btn-sm">
+                                Mais antigos
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Filtrar</button>
+            </div>
+        </div>
+    </div>
+</div>

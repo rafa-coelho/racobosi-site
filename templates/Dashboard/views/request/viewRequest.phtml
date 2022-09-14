@@ -1,0 +1,144 @@
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-12">
+                <h1>Chamado <?= $this->data->code ?></h1>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="<?= HOST ?>dashboard">Home</a></li>
+                    <li class="breadcrumb-item"><a href="<?= HOST ?>dashboard/requests">Chamados</a></li>
+                    <li class="breadcrumb-item active">Chamado <?= $this->data->code ?></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content">
+
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-8 order-2 order-md-1">
+                    <!-- <div class="row">
+                        <div class="col-sm-4">
+                            <div class="info-box">
+                                <div class="info-box-content">
+                                    <span class="info-box-text text-center text-muted">Data de abertura</span>
+                                    <span class="info-box-number text-center text-muted mb-0">13/09/2022</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="info-box">
+                                <div class="info-box-content">
+                                    <span class="info-box-text text-center text-muted">Tipo</span>
+                                    <span class="info-box-number text-center mb-0 text-danger">Bug</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="info-box">
+                                <div class="info-box-content">
+                                    <span class="info-box-text text-center text-muted">Status</span>
+                                    <span class="info-box-number text-center text-muted mb-0">Em Andamento</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <div class="row">
+                        <div class="col-12 mb-3">
+                            <h3 class="title">Erro na listagem de clientes</h3>
+                            <p>
+                                Aparece uma coisa esquisita quando eu pesquiso o cliente 27.
+                            </p>
+                        </div>
+                        <div class="col-12">
+                            <h6 class="text-bold">Passos para erro</h6>
+                            <p>
+                                Ir na listagem de clientes e pesquisar o código 27
+                            </p>
+                        </div>
+                        <div class="col-12">
+                            <h6 class="text-bold">Anexos</h6>
+                            <div class="row">
+                                <div class="col-sm-2">
+                                    <a href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                                        <img src="https://unsplash.it/600.jpg?image=251" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="col-sm-2">
+                                    <a href="https://unsplash.it/1200/768.jpg?image=252" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                                        <img src="https://unsplash.it/600.jpg?image=252" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="col-sm-2">
+                                    <a href="https://unsplash.it/1200/768.jpg?image=253" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                                        <img src="https://unsplash.it/600.jpg?image=253" class="img-fluid">
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <h4>Comentários</h4>
+
+                            <div class="post clearfix">
+                                <div class="user-block">
+                                    <img class="img-circle img-bordered-sm" src="https://via.placeholder.com/500?text=S">
+                                    <span class="username">
+                                        <a href="#">Fernanda</a>
+                                    </span>
+                                    <span class="description">08:17 - 13/09/2022</span>
+                                </div>
+                                <p>
+                                    Usuário adicionou o anexo "print1.png"
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-md-12 col-lg-4 order-1 order-md-2">
+                    <div class="text-muted">
+                        <p class="text-sm">
+                            Cliente
+                            <a href="<?= HOST ?>customers/PREF" class="text-bold d-block">Prefácio</a>
+                        
+                            <br>
+                            
+                            Solicitante
+                            <a href="<?= HOST ?>customers/PREF" class="text-bold d-block">Fernanda</a>
+                        </p>
+                    </div>
+
+                    <h5 class="mt-5 text-muted">Anexos</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-image"></i> print1.png</a>
+                        </li>
+                        <li>
+                            <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-image"></i> print2.png</a>
+                        </li>
+                        <li>
+                            <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-image"></i> print3.png</a>
+                        </li>
+                    </ul>
+                    <div class="mt-1 mb-3">
+                        <a href="#" class="">Anexar arquivo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
+
+</section>
