@@ -21,3 +21,5 @@ Lugh::addPost("api/auth", "private.AuthController.Autenticar");
 Lugh::addGet("dashboard", "private.AdminController.Dashboard");
 Lugh::addGet("dashboard/requests", "private.AdminController.RequestList");
 Lugh::addGet("dashboard/request/(?P<code>[{]?[a-zA-Z]{1,10}-([0-9]{1,9})[}]?)", "private.AdminController.ViewRequest");
+
+Lugh::addGet("dashboard/customers", "private.AdminController.CustomerList");

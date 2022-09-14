@@ -1,0 +1,91 @@
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-12">
+                <h1>Clientes</h1>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active">Clientes</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <div class="row" style="margin-bottom: 1em;">
+            <div class="col-md-12">
+                <label for="search">Buscar</label><input type="text" id="search" class="form-control" placeholder="Busque pelo código ou nome do cliente">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <!-- /.card-header -->
+                    <div class="card-body p-0">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Cliente</th>
+                                    <th>Responsável</th>
+                                    <th>Total de Chamados</th>
+                                    <th>Cliente desde</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <a href="<?= HOST ?>dashboard/customer/PREF">Prefácio Paramentos</a>
+                                    </td>
+                                    <td>
+                                        <a href="<?= HOST ?>dashboard/user/">Fernanda</a>
+                                    </td>
+                                    <td>93</td>
+                                    <td>13/11/2020</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="<?= HOST ?>dashboard/customer/CSJ">Confecções São José</a>
+                                    </td>
+                                    <td>
+                                        <a href="<?= HOST ?>dashboard/user/">Camila</a>
+                                    </td>
+                                    <td>27</td>
+                                    <td>21/03/2022</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="<?= HOST ?>dashboard/customer/UITOP">UiTop</a>
+                                    </td>
+                                    <td>
+                                        <a href="<?= HOST ?>dashboard/user/">Vitor</a>
+                                    </td>
+                                    <td>3</td>
+                                    <td>10/09/2022</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="card-footer">
+                        <div class="card-tools">
+                            <ul class="pagination pagination-sm float-right">
+                                <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.col -->
+            </div>
+        </div>
+        <!-- /.row -->
+
+    </div>
+</section>
