@@ -203,7 +203,7 @@
 
                         <?php foreach ([
                             ["icon" => "fa-tachometer-alt", "label" => "Dashboard", "url" => "dashboard"],
-                            ["icon" => "fa-list", "label" => "Solicitações", "url" => "dashboard/requests"],
+                            ["icon" => "fa-bell", "label" => "Chamados", "url" => "dashboard/requests"],
                         ] as $item) : ?>
                             <li class="nav-item">
                                 <a href="<?= isset($item["url"]) ? HOST . $item["url"] : "#" ?>" class="nav-link <?= isset($item["url"]) && URI == $item["url"] ? "active" : "" ?>">

@@ -4,7 +4,7 @@ class MainController extends Controller
 {
     
     public function __construct(){
-        $this->views = new Template("Home", "index");
+        $this->views = new Template("Home");
     }
     
     public function Home(){

@@ -1,21 +1,38 @@
 <section class="content-header">
     <div class="container-fluid">
-        <div class="row mb-2">
-            <div class="col-12">
-                <h1>Chamado <?= $this->data->code ?></h1>
+        <div class="row mb-2 justify-content-between">
+            <div class="col-auto">
+                <h1>
+                    [<?= $this->data->code ?>] Erro na listagem de clientes
+                </h1>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="<?= HOST ?>dashboard">Home</a></li>
                     <li class="breadcrumb-item"><a href="<?= HOST ?>dashboard/requests">Chamados</a></li>
-                    <li class="breadcrumb-item active">Chamado <?= $this->data->code ?></li>
+                    <li class="breadcrumb-item active">Chamado
+                        <?= $this->data->code ?>
+                    </li>
                 </ol>
+            </div>
+            <div class="col-auto">
+                <button type="button" class="btn btn-sm btn-primary">
+                    Alterar Status
+                </button>
             </div>
         </div>
     </div>
 </section>
 
-<section class="content">
 
+<section class="content">
     <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Info</h3>
+            <div class="card-tools">
+                <button type="button" class="btn btn-tool">
+                    <i class="fas fa-minus"></i>
+                </button>
+            </div>
+        </div>
         <div class="card-body">
             <div class="row">
                 <div class="col-12 col-md-12 col-lg-8 order-2 order-md-1">
@@ -48,7 +65,7 @@
 
                     <div class="row">
                         <div class="col-12 mb-3">
-                            <h3 class="title">Erro na listagem de clientes</h3>
+
                             <p>
                                 Aparece uma coisa esquisita quando eu pesquiso o cliente 27.
                             </p>
@@ -111,9 +128,9 @@
                         <p class="text-sm">
                             Cliente
                             <a href="<?= HOST ?>customers/PREF" class="text-bold d-block">Prefácio</a>
-                        
+
                             <br>
-                            
+
                             Solicitante
                             <a href="<?= HOST ?>customers/PREF" class="text-bold d-block">Fernanda</a>
                         </p>
