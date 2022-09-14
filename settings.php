@@ -23,6 +23,7 @@ define("PROD", isset($_ENV["ENV"]) && $_ENV["ENV"] == 'prod');
 define('REQUEST_PROTOCOL', isset($_SERVER["HTTP_X_FORWARDED_PROTO"]) ? $_SERVER["HTTP_X_FORWARDED_PROTO"] . "://" : "http://");
 define('HOST',  REQUEST_PROTOCOL . $_SERVER['HTTP_HOST'] . '/');
 define('URI', preg_replace('~/~', '', $_SERVER['REQUEST_URI'], 1));
+define("RC_TOKEN", isset($_ENV["RC_TOKEN"]) ? $_ENV["RC_TOKEN"] : "test");
 
 if (PROD && REQUEST_PROTOCOL == "http://") {
     header("HTTP/1.1 301 Moved Permanently");
@@ -58,5 +59,13 @@ $MAIL = isset($_ENV["MAIL"]) ? $_ENV["MAIL"] : "rafael.coelho@racoelho.com.br";
 
 define("MEDIA_DIR", HOST . "media/");
 define("MAIL_ADDRESS",  $MAIL);
+
+define("MAIL_HOST", "smtp.umbler.com");
+define("MAIL_PORT", "587");
+define("MAIL_USERNAME", "contato@racoelho.com.br");
+define("MAIL_PASSWORD", "Q,,!5yaAOT4I");
+define("MAIL_FROM", "contato@racoelho.com.br");
+define("MAIL_ALIAS", "Contato Racoelho");
+
 
 mb_internal_encoding('UTF-8');

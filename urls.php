@@ -16,3 +16,6 @@ Lugh::addPost("api/decrypt", "private.CryptoController.Decrypt");
 
 Lugh::addPost("api/auth/create", "private.AuthController.Criar");
 Lugh::addPost("api/auth", "private.AuthController.Autenticar");
+
+
+Lugh::addPost("api/mail", "private.MailerController.EnviarEmail");

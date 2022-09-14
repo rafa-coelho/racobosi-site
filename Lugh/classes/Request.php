@@ -72,8 +72,9 @@ class Request
         $o = new stdClass;
         $json = json_decode(file_get_contents('php://input'));
         if(!empty($json))
-            foreach($json as $k => $v)
-                $o->$k = addslashes($v);
+            foreach($json as $k => $v){
+                $o->$k = (is_string($v)) ? addslashes($v) : $v; 
+            }
         return $o;
     }
     
