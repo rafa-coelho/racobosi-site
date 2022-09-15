@@ -35,4 +35,10 @@ class AdminController extends Controller
         $this->views->title = "Clientes";
         $this->views->display("customers/customerList.phtml");
     }
+
+    public function ViewCustomer()
+    {
+        $this->views->title = "Clientes";
+        $this->views->display("customers/viewCustomer.phtml");
+    }
 }

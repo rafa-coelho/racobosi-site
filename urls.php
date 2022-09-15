@@ -23,3 +23,4 @@ Lugh::addGet("dashboard/requests", "private.AdminController.RequestList");
 Lugh::addGet("dashboard/request/(?P<code>[{]?[a-zA-Z]{1,10}-([0-9]{1,9})[}]?)", "private.AdminController.ViewRequest");
 
 Lugh::addGet("dashboard/customers", "private.AdminController.CustomerList");
+Lugh::addGet("dashboard/customer/(?P<code>[[a-zA-Z0-9]+?)", "private.AdminController.ViewCustomer");

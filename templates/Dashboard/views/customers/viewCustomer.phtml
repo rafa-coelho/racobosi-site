@@ -1,0 +1,352 @@
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2 justify-content-between">
+            <div class="col-auto">
+                <h1>
+                    Cliente - Prefácio
+                </h1>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="<?= HOST ?>dashboard">Home</a></li>
+                    <li class="breadcrumb-item"><a href="<?= HOST ?>dashboard/customers">Clientes</a></li>
+                    <li class="breadcrumb-item active">
+                        Prefácio
+                    </li>
+                </ol>
+            </div>
+            <div class="col-auto">
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-md-3">
+                <div class="card card-primary ">
+                    <div class="card-body box-profile">
+                        <h3 class="profile-username text-center">Prefácio Paramentos</h3>
+                        <p class="text-muted text-center"></p>
+
+                        <ul class="list-group list-group-unbordered mb-3">
+                            <li class="list-group-item">
+                                <b>Código</b>
+                                <span class="float-right">PREF</span>
+                            </li>
+                            <li class="list-group-item">
+                                <b>Responsável</b>
+                                <a class="float-right">Fernanda</a>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="row justify-content-between">
+                                    <div class="col-auto">
+                                        <b>CNPJ</b>
+                                    </div>
+                                    <div class="col text-right" readonly>
+                                        <span data-double-click="copy" data-toggle="tooltip" data-placement="right" title="Clique duas vezes para copiar" class="prevent-select">
+                                            82.132.836/0001-04
+                                        </span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <b>Total de Tickets</b>
+                                <span class="float-right">527</span>
+                            </li>
+                            <li class="list-group-item">
+                                <b>Não cobrados</b>
+                                <span class="float-right">19</span>
+                            </li>
+                            <li class="list-group-item">
+                                <b>Cliente desde</b>
+                                <span class="float-right">10/11/2020</span>
+                            </li>
+                            <li class="list-group-item">
+                                <b>Endereço</b>
+                                <p data-double-click="copy" data-toggle="tooltip" data-placement="right" title="Clique duas vezes para copiar" class="prevent-select text-muted mb-0">
+                                    Alameda Itu, 920 - Jardim Paulista, São Paulo - SP, 01421-002
+                                </p>
+                            </li>
+                        </ul>
+                        <a class="btn btn-primary btn-block btn-sm">
+                            <i class="fa fa-edit fa-sm mr-1"></i>
+                            Editar
+                        </a>
+                        <a class="btn btn-success btn-block btn-sm">
+                            <i class="fa fa-dollar-sign mr-1"></i>
+                            Gerar nota
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <div class="card">
+                    <div class="card-header">
+                        <ul class="nav nav-pills ml-auto p-2">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#tab_tickets" data-toggle="tab">Chamados</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#tab_users" data-toggle="tab">Usuários</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#tab_sistemas" data-toggle="tab">Sistemas</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <div class="tab-content">
+
+                            <div class="tab-pane active" id="tab_tickets">
+                                <div class="row">
+                                    <div class="col-md-11 ">
+                                        <label for="search">Buscar</label><input type="text" id="search" class="form-control" placeholder="Busque pelo código ou titulo do chamado">
+                                    </div>
+                                    <div class="col pull-right text-right">
+                                        <div class="row pull-right">
+                                            <label for="filter_status">Filtro</label>
+                                        </div>
+                                        <div class="row text-right justify-items-right">
+                                            <button class="btn btn-default btn-block pull-right" data-toggle="modal" data-target="#filterModal">
+                                                <i class="fas fa-filter"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <br>
+
+                                <div class="row justify-content-end mb-1">
+                                    <div>
+                                        <button id="delete_btn" class="btn btn-sm btn-primary" disabled>
+                                            <i class="fa fa-exchange-alt mr-1"></i>
+                                            Alterar Status
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th><input type="checkbox" name="select" id="select_all"></th>
+                                            <th>Chamado</th>
+                                            <th>Sistema</th>
+                                            <th>Data da Solicitação</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="select_box">
+                                                <input type="checkbox" class="select">
+                                            </td>
+                                            <td>
+                                                <span class="badge bg-danger">Bug</span>
+                                                <a href="<?= HOST ?>dashboard/request/PREF-1152">
+                                                    PREF-190 - Erro na listagem de clientes
+                                                </a>
+                                            </td>
+                                            <td>
+                                                Portal Prefácio
+                                            </td>
+                                            <td>13/09/2022</td>
+                                            <td><span class="badge bg-danger">Atrasado</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="tab-pane" id="tab_users">
+                                <div class="row justify-content-between">
+                                    <div class="col">
+                                        <h4>Usuário de Prefácio</h4>
+                                    </div>
+                                    <div class="col-auto float-right">
+                                        <button class="btn btn-sm btn-primary">
+                                            <i class="fa fa-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <br>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Nome</th>
+                                            <th>Email</th>
+                                            <th>Celular</th>
+                                            <th>Tipo</th>
+                                            <th>Ações</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Fernanda</td>
+                                            <td>fernanda@prefacioparamentos.com</td>
+                                            <td>(11) 91234-5678</td>
+                                            <td>Responsável</td>
+                                            <td>
+                                                <button class="btn btn-icon">
+                                                    <i class="fa fa-cogs"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="tab-pane" id="tab_sistemas">
+                                <div class="row justify-content-between">
+                                    <div class="col">
+                                        <h4>Sistemas de Prefácio</h4>
+                                    </div>
+                                    <div class="col-auto float-right">
+                                        <button class="btn btn-sm btn-primary">
+                                            <i class="fa fa-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <br>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Nome</th>
+                                            <th>Link</th>
+                                            <th>Status</th>
+                                            <th style="width: 10px;">Ações</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Portal Prefácio</td>
+                                            <td>
+                                                <a href="http://app.prefacioparamentos.com">
+                                                    https://app.prefacioparamentos.com
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <span class="badge bg-success">Ativo</span>
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-icon">
+                                                    <i class="fa fa-cogs"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+<div class="modal fade" id="filterModal" tabindex="-1" role="dialog" aria-labelledby="filterModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Filtros</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+
+                    <div class="row">
+                        <div class="col-12">
+                            <h6>Status</h6>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-4 mb-3 text-center">
+                            <button class="btn btn-primary btn-block btn-sm">
+                                Aberto
+                            </button>
+                        </div>
+                        <div class="col-4 mb-3 text-center">
+                            <button class="btn btn-default btn-block btn-sm">
+                                Cancelado
+                            </button>
+                        </div>
+                        <div class="col-4 mb-3 text-center">
+                            <button class="btn btn-default btn-block btn-sm">
+                                Atrasado
+                            </button>
+                        </div>
+                        <div class="col-4 mb-3 text-center">
+                            <button class="btn btn-default btn-block btn-sm">
+                                Em Andamento
+                            </button>
+                        </div>
+                        <div class="col-4 mb-3 text-center">
+                            <button class="btn btn-default btn-block btn-sm">
+                                Concluído
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <h6>Tipo</h6>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-4 mb-3 text-center">
+                            <button class="btn btn-primary btn-block btn-sm">
+                                Bug
+                            </button>
+                        </div>
+                        <div class="col-4 mb-3 text-center">
+                            <button class="btn btn-default btn-block btn-sm">
+                                Alteração
+                            </button>
+                        </div>
+                        <div class="col-4 mb-3 text-center">
+                            <button class="btn btn-default btn-block btn-sm">
+                                Funcionalidade
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <h6>Ordenar por</h6>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-4 mb-3 text-center">
+                            <button class="btn btn-primary btn-block btn-sm">
+                                Mais novos
+                            </button>
+                        </div>
+                        <div class="col-4 mb-3 text-center">
+                            <button class="btn btn-default btn-block btn-sm">
+                                Mais antigos
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-primary">Filtrar</button>
+            </div>
+        </div>
+    </div>
+</div>
