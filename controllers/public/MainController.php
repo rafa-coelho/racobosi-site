@@ -14,7 +14,7 @@ class MainController extends Controller
         $this->views->display("home.phtml");
 
         if (!isset($_COOKIE["_ra"])) {
-            setcookie("_ra", REQUEST_IP, time() + YEAR_SECONDS, "/");
+            setcookie("_ra", REQUEST_IP . "_", time() + YEAR_SECONDS, "/");
         }
 
         $reference = isset($_GET["ref"]) ? $_GET["ref"] : "";
