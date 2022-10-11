@@ -48,6 +48,10 @@ class Lugh
 
             $uri = parse_url(URI);
             $matches = array();
+            
+            if(!isset($uri["path"]))
+                $uri["path"] = "";
+
             if (preg_match("#^\/?{$k}\/?$#i", $uri["path"], $matches)) {
                 $match = true;
                 $control = $v;
