@@ -47,7 +47,7 @@ define('HTTP_PROXY_PORT', '');
 define('SESSION_SALT', '');
 define('REQUEST_IP', $ip);
 define("REQUEST_TOKEN", md5($ip) . sha1(SESSION_SALT));
-define("GA_KEY", "G-GE5WZZ8KP0");
+define("GA_KEY", "G-YBXWWSS0QY");
 
 define('DB_HOST', isset($_ENV["DB_HOST"]) ? $_ENV["DB_HOST"] : "127.0.0.1");
 define('DB_BASE', isset($_ENV["DB_BASE"]) ? $_ENV["DB_BASE"] : "rcws");
