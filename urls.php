@@ -8,6 +8,7 @@
 
 Lugh::addGet("", "public.MainController.Home");
 Lugh::addGet("analytics", "public.AnalyticsController.RegisterAccess");
+Lugh::addPost("notificatios", "public.MainController.Notifications");
 
 Lugh::addGet("api/senha", "private.SenhasController.BuscarSenha");
 Lugh::addPost("api/senha", "private.SenhasController.CriarSenha");
@@ -18,3 +19,5 @@ Lugh::addPost("api/decrypt", "private.CryptoController.Decrypt");
 
 Lugh::addPost("api/auth/create", "private.AuthController.Criar");
 Lugh::addPost("api/auth", "private.AuthController.Autenticar");
+
+

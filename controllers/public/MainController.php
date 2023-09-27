@@ -13,4 +13,8 @@ class MainController extends Controller
         $this->views->title = "Tela um";
         $this->views->display("home.phtml");
     }
+
+    public function Notifications(){
+        http_response_code(200);
+    }
 }
