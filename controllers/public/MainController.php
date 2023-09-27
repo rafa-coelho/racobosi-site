@@ -15,6 +15,8 @@ class MainController extends Controller
     }
 
     public function Notifications(){
+        echo "ok";
         http_response_code(200);
+        return;
     }
 }
